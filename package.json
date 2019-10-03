@@ -1,6 +1,6 @@
 {
   "name": "generator-nextjs-apollo-graphql-materialui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman generator for Next.js project connected with Apollo client and Material-ui component library",
   "homepage": "https://github.com/tsvetann/generator-nextjs-apollo-graphql-materialui",
   "main": "generators/index.js",
