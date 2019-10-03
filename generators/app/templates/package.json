@@ -1,6 +1,7 @@
 {
   "name": "<%= name %>",
   "version": "1.0.0",
+  "author": "<%= projectAuthor %>",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",

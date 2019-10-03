@@ -16,6 +16,12 @@ module.exports = class extends Generator {
         default: 3000
       },
       {
+        type: "input",
+        name: "projectAuthor",
+        message: "Author names:",
+        default: ''
+      },
+      {
         type: "confirm",
         name: "confirmed",
         message: "Would you like to create the new service?"
@@ -24,13 +30,12 @@ module.exports = class extends Generator {
 
     this.log("app name", this.answers.name);
     this.log("running on port: ", this.answers.port);
-    this.log(this.answers)
   }
 
   writing() {
     this.fs.copyTpl(
       `${this.templatePath()}/**/!(_)`,
-      this.destinationPath(),
+      this.destinationPath('./'),
       this.answers,
     );
     this.fs.copyTpl(
@@ -38,6 +43,7 @@ module.exports = class extends Generator {
       this.destinationPath('./'),
       this.answers,
     );
+    this.log(`App created in ${this.destinationPath()}`)
   }
 
   install() {
